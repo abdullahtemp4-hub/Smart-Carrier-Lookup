@@ -125,13 +125,13 @@ The product is a research and screening aid, not a compliance system. It can gen
 Watch the supplied walkthrough directly in the proposal:
 
 <video controls playsinline preload="metadata" width="100%">
-    <source src="https://res.cloudinary.com/dmh3yyu3p/video/upload/v1790111260/Tutorial-Final_uvdtz5.mp4" type="video/mp4">
+    <source src="Tutorial-Final.mp4" type="video/mp4">
     Your browser does not support inline video.
-    <a href="https://res.cloudinary.com/dmh3yyu3p/video/upload/v1790111260/Tutorial-Final_uvdtz5.mp4">Open the tutorial video</a>.
+    <a href="https://res.cloudinary.com/dmh3yyu3p/video/upload/v1790115427/Tutorial-Final_ilhzm9.mp4">Open the tutorial video</a>.
 </video>
 
 
-You can also [open the tutorial video](https://res.cloudinary.com/dmh3yyu3p/video/upload/v1790111260/Tutorial-Final_uvdtz5.mp4) in a separate player.
+You can also [open the tutorial video](https://res.cloudinary.com/dmh3yyu3p/video/upload/v1790115427/Tutorial-Final_ilhzm9.mp4) in a separate player.
 
 The video is included as a repository reference asset. Authorized software packages also include a product README with installation, configuration, usage, output, and limitation details.
 
@@ -158,8 +158,12 @@ Carrier Lookup Smart is proprietary software owned and published by Muhammad Abd
 
 The product license generally permits authorized internal business use and one archival backup, subject to the named-user and installation limits stated by the owner. It does not permit copying, modification, reverse engineering, resale, sublicensing, public uploading, or unauthorized sharing.
 
-See [LICENSE](LICENSE) for the repository terms and [License](License) for the distributed software EULA.
+See [LICENSE](LICENSE) for the repository terms and [License](License.txt) for the distributed software EULA.
 
 ## 11. Next Step
+Read [Frequently Asked Questions](FAQS.md).
 
-For access, licensing questions, additional seats, or a commercial discussion, contact **Muhammad Abdullah** at [abdullahtemp4@gmail.com](mailto:abdullahtemp4@gmail.com).
+For access, licensing questions, additional seats, or a commercial discussion, contact **Muhammad Abdullah** at [abdullahtemp4@gmail.com](mailto:abdullahtemp4@gmail.com) or Through Whatsapp.
+
+Website: <a href="https://spectacular-conkies-688a8b.netlify.app">Smart Carrier Lookup Website</a>.
+</video>

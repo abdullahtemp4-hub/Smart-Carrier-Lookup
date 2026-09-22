@@ -189,7 +189,7 @@ Yes. Individual VINs observed during inspections can be decoded through the NHTS
 <details>
 <summary>Where can I watch the tutorial?</summary>
 
-It is given in the repository. Here: [open the tutorial video](Tutorial-Final.mp4) The README contains the complete written product documentation.
+It is given in the repository. Here: [open the tutorial video](https://res.cloudinary.com/dmh3yyu3p/video/upload/v1790111260/Tutorial-Final_uvdtz5.mp4) The README contains the complete written product documentation.
 
 </details>
 
