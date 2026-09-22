@@ -125,9 +125,9 @@ The product is a research and screening aid, not a compliance system. It can gen
 Watch the supplied walkthrough directly in the proposal:
 
 <video controls playsinline preload="metadata" width="100%">
-    <source src="Tutorial-Final.mp4" type="video/mp4">
+    <source src="https://res.cloudinary.com/dmh3yyu3p/video/upload/v1790111260/Tutorial-Final_uvdtz5.mp4" type="video/mp4">
     Your browser does not support inline video.
-    <a href="Tutorial-Final.mp4">Open the tutorial video</a>.
+    <a href="https://res.cloudinary.com/dmh3yyu3p/video/upload/v1790111260/Tutorial-Final_uvdtz5.mp4">Open the tutorial video</a>.
 </video>
 
 
