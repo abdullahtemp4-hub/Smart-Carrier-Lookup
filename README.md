@@ -131,7 +131,7 @@ Watch the supplied walkthrough directly in the proposal:
 </video>
 
 
-You can also [open the tutorial video](Tutorial-Final.mp4) in a separate player.
+You can also [open the tutorial video](https://res.cloudinary.com/dmh3yyu3p/video/upload/v1790111260/Tutorial-Final_uvdtz5.mp4) in a separate player.
 
 The video is included as a repository reference asset. Authorized software packages also include a product README with installation, configuration, usage, output, and limitation details.
 
