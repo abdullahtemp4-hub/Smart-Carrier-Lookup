@@ -1,81 +1,165 @@
 # Carrier Lookup Smart
+## Product Proposal
 
-**A private Windows research and bulk-extraction tool for motor-carrier data.**
+**Prepared for freight, brokerage, dispatch, compliance, onboarding, insurance, and factoring workflows**
 
-Carrier Lookup Smart helps freight professionals research individual carriers, qualify large carrier lists, and produce practical CSV, HTML, and PDF outputs from live public data services. It runs locally on Windows and opens in a browser, while the distributed executable remains available only through the owner's authorized delivery process.
+Carrier Lookup Smart is a private Windows application for researching motor carriers and processing carrier lists at scale. It combines live public-source lookups, configurable qualification rules, and practical report exports in one local browser-based workflow.
 
-> **Documentation repository:** This public-facing repository explains the product and its use. It does not publish the executable or the password-protected distribution archive.
+This proposal describes the product and its authorized distribution model. The executable is not published in this repository.
 
-## What It Does
+## 1. The Problem
 
-- Search by DOT, MC/MX docket, email, phone, officer name, or company name.
-- Review identity, authority, insurance, fleet, driver, inspection, and related-company information.
-- Run bulk extraction from ranges, pasted lists, or `.txt`, `.csv`, and `.log` files.
-- Apply qualification rules for authority, geography, cargo, insurance, fleet, vehicles, drivers, and status.
-- Export accepted records as fixed-layout CSV, filterable HTML, or printable PDF reports.
-- Keep local session history, report history, cache controls, and an Advance Register for carrier PDFs.
+Carrier research often means moving between several public websites, repeating the same searches, copying fields into spreadsheets, and manually deciding which records meet a team's working criteria. That process is slow, difficult to repeat consistently, and hard to audit when the volume grows.
 
-## At A Glance
+Teams may need to:
 
-| | |
-|---|---|
-| **Platform** | Windows 10 or Windows 11, 64-bit |
-| **Delivery** | Authorized users receive a password-protected ZIP |
-| **Package** | Executable, product README, and License/EULA |
-| **Browser** | Microsoft Edge or Google Chrome |
-| **Connection** | Internet access required for live source data |
-| **Publisher** | Muhammad Abdullah, trading as HAULIXX LOGISTICS |
+- investigate one carrier from a DOT number, docket, contact detail, officer, or company name;
+- screen a range or list of carrier identifiers;
+- compare authority, insurance, fleet, driver, and inspection information;
+- apply the same qualification rules to every record; and
+- retain usable records and reports for follow-up.
 
-## Screenshots
+## 2. Proposed Solution
 
-Package contents:
+Carrier Lookup Smart provides two connected workflows:
 
-![The distributed package contains the executable, README, and license.](Zip-contains-this.png)
+1. **Single-carrier research** for quickly opening a detailed carrier record.
+2. **Bulk extraction** for processing ranges or lists, filtering records, and exporting the accepted results. It generates 1000s of Leads in seconds.
 
-![The executable and its accompanying documents shown together.](Zip-content-Live.png)
+The application runs on the user's Windows computer, starts a local web server, and opens the interface in Microsoft Edge or Google Chrome. Source requests are made to the documented public services; the application does not ship an offline copy of carrier data.
 
-## Tutorial
-
-The supplied walkthrough is available here: [Watch the tutorial video](Tutorial-Final.mp4).
-
-The tutorial covers the main search, extraction, filtering, and report workflow. The detailed written tutorial is included in [PROPOSAL.md](PROPOSAL.md) and the distributed package README.
-
-## Data Sources
-
-The application reads live data from public services documented in the product manual, including the US DOT Socrata open-data portal, FMCSA QCMobile when enabled, and NHTSA vPIC for VIN decoding. The linked third-party services remain independent of the product. Data quality, availability, freshness, and rate limits are controlled by those providers.
-
-Carrier Lookup Smart is a research and screening tool. It does not replace official records, compliance review, underwriting judgment, or the user's legal obligations.
-
-## Access And Distribution
-
-The software is proprietary and is not an open-source project. Authorized users receive a separately delivered, password-protected ZIP containing:
+## 3. How It Works
 
 ```text
-Carrier_Lookup_Smart/
-├── Carrier_Lookup_Smart.exe
-├── README.md
-└── License.txt
+Identifier or list
+        |
+        v
+Search / extraction engine
+        |
+        +--> Public source requests
+        |
+        +--> Qualification rules
+        |
+        v
+Carrier records, session history, and reports
 ```
 
-The ZIP is not published in this repository. Do not upload, forward, resell, or share the executable, archive, source code, API keys, or private application data. To request access, another user seat, or a commercial licensing discussion, contact **Muhammad Abdullah / HAULIXX LOGISTICS** using the contact channel provided by the owner.
+The application can search by DOT number, MC/MX docket, email, phone, officer name, or company name. Bulk inputs can be a numeric range, pasted list, or `.txt`, `.csv`, or `.log` file. Duplicate identifiers are removed from pasted or uploaded lists, and bulk requests are batched with retries and optional pacing.
 
-## Documentation
+## 4. Product Capabilities
 
-- [Product proposal and detailed workflow](PROPOSAL.md)
-- [Frequently asked questions](FAQS.md)
-- [Repository and software license terms](LICENSE)
-- [Distribution license supplied with the software](License.txt)
+### Research
 
-## Requirements Summary
+- Detailed carrier cards with identity, DBA, dockets, entity type, address, contacts, authority, insurance, USDOT status, fleet, drivers, inspections, VINs, and related companies.
+- Broad searches with paginated results and on-demand detail loading.
+- One-Click Copy buttons for useful MC, DOT, Email, Phone number and VIN fields.
+- Optional FMCSA badges and address flags.
+- One-click VIN decoding through NHTSA vPIC.
+- One-click officer-name pronunciation which helps users pronounce officer names correctly, especially those who are less confident with pronunciation.
+- Links to related Major external carrier pages on Safer, Fleetfax, BrokerSnapshot, and Motus.
 
-- Windows 10 or 11, 64-bit.
-- A modern browser and an internet connection.
-- No Python installation or administrator rights required.
+### Bulk extraction
+
+- DOT or MC/MX range processing.
+- Pasted identifiers or uploaded text/CSV/log files.
+- Live progress, valid and rejected counts, throughput, ETA, elapsed time, and event log.
+- Clean stop support, checkpointed CSV writing, retries, optional pacing, and optional source-response caching.
+
+### Rules and outputs
+
+Rules can include entity type, operation classification, country, state, cargo, keyword exclusions, authority level, insurance age, fleet size, vehicle and driver counts, active USDOT status, and active insurance.
+
+Outputs include:
+
+- a fixed 56-column UTF-8 CSV record file;
+- a self-contained, filterable and sortable HTML report;
+- a printable PDF daily report; and
+- HTML or PDF exports of current results of SEARCH page.
+- The output also displays the current live time for the entity's state.
+
+The application also stores local session history, report history, and cache controls, and provides an Advance Register workflow for carrier PDFs placed in the daily register folder.
+
+
+## 5. Typical Workflow
+
+1. Start the authorized executable.
+2. Add optional API keys in the local `.env` file when needed.
+3. Search a carrier or open the Dashboard for a bulk run.
+4. Select a DOT/MC input method and provide the identifiers.
+5. Configure and save the qualification rules.
+6. Start extraction and monitor the live session.
+7. Review accepted and rejected results.
+8. Open the generated CSV, HTML, or PDF report from the local output folder.
+9. Keep API keys, logs, session data, and business reports private.
+
+## 6. Requirements
+
+- Windows 10 or Windows 11, 64-bit.
+- Microsoft Edge or Google Chrome.
+- Internet access for live data requests.
+- No Python installation or administrator rights.
 - 8 GB RAM recommended; 4 GB is practical for single lookups and small ranges.
-- Optional `SOCRATA_APP_TOKEN` and `FMCSA_WEB_KEY` values can improve bulk reliability or enable the FMCSA overlay.
+- Approximately 80 MB for the executable, plus space for generated reports.
 
-For installation, configuration, complete feature details, limitations, outputs, and data handling, read the [product proposal](PROPOSAL.md) and the README included with an authorized software package.
+Optional configuration values:
 
-## Ownership
+| Variable | Purpose |
+|---|---|
+| `SOCRATA_APP_TOKEN` | Recommended for more reliable attribution and bulk requests. |
+| `FMCSA_WEB_KEY` | Enables the optional FMCSA carrier, out-of-service, and cargo overlay. |
 
-Carrier Lookup Smart is Copyright (c) 2026 Muhammad Abdullah, trading as HAULIXX LOGISTICS. All rights reserved. See [LICENSE](LICENSE) for the repository terms and the distributed [License.txt](License.txt) for the product EULA.
+## 7. Data Sources And Boundaries
+
+The product documentation identifies these services:
+
+- US DOT Socrata open-data datasets for census, authority, insurance, out-of-service, and inspection records.
+- FMCSA QCMobile when the optional FMCSA integration is enabled.
+- NHTSA vPIC for VIN decoding.
+
+Carrier Lookup Smart presents third-party public data. It does not create, verify, or guarantee that data. Source availability, schema changes, freshness, completeness, and rate limits remain outside the application's control.
+
+The product is a research and screening aid, not a compliance system. It can generate 1000s of Leads in seconds.
+
+## 8. Tutorial
+
+Watch the supplied walkthrough directly in the proposal:
+
+<video controls playsinline preload="metadata" width="100%">
+    <source src="Tutorial-Final.mp4" type="video/mp4">
+    Your browser does not support inline video.
+    <a href="Tutorial-Final.mp4">Open the tutorial video</a>.
+</video>
+
+
+You can also [open the tutorial video](Tutorial-Final.mp4) in a separate player.
+
+The video is included as a repository reference asset. Authorized software packages also include a product README with installation, configuration, usage, output, and limitation details.
+
+## 9. Distribution Package
+
+Authorized users receive a separate password-protected ZIP. It contains:
+
+```text
+Carrier_Lookup_Smart.zip/
+|- Carrier_Lookup_Smart.exe
+|- README.md
+|- License.txt
+```
+
+![Live view of the distributed package contents.](Zip-content-Live.png)
+
+![Package contents showing the executable, README, and license.](Zip-contains-this.png)
+
+The executable and protected ZIP are deliberately not published in this documentation repository. The password should be provided only through the owner's authorized delivery channel.
+
+## 10. License And Ownership
+
+Carrier Lookup Smart is proprietary software owned and published by Muhammad Abdullah, trading as HAULIXX LOGISTICS. The software is licensed, not sold. Authorized use is governed by the `License.txt` file supplied with the package.
+
+The product license generally permits authorized internal business use and one archival backup, subject to the named-user and installation limits stated by the owner. It does not permit copying, modification, reverse engineering, resale, sublicensing, public uploading, or unauthorized sharing.
+
+See [LICENSE](LICENSE) for the repository terms and [License](License) for the distributed software EULA.
+
+## 11. Next Step
+
+For access, licensing questions, additional seats, or a commercial discussion, contact **Muhammad Abdullah** at [abdullahtemp4@gmail.com](mailto:abdullahtemp4@gmail.com).
