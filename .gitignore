@@ -1,0 +1,12 @@
+# Private distribution artifacts
+*.exe
+*.zip
+
+# Local application data and credentials
+.env
+data/
+logs/
+*.sqlite3
+
+# Generated reports
+output/
