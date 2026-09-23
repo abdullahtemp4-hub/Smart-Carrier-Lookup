@@ -1,4 +1,18 @@
 # Carrier Lookup Smart
+
+<table width="100%" cellpadding="18" cellspacing="0">
+<tr>
+<td width="32%" align="center">
+<img src="https://res.cloudinary.com/dmh3yyu3p/image/upload/v1790148138/logo_vulhph.png" alt="Smart Carrier Lookup logo" width="150" />
+</td>
+<td valign="middle">
+<h1>Muhammad Abdullah</h1>
+<p><a href="mailto:abdullahtemp4@gmail.com">abdullahtemp4@gmail.com</a></p>
+<p><a href="https://smart-carrier-lookup.netlify.app">Smart Carrier Lookup Website</a></p>
+</td>
+</tr>
+</table>
+
 ## Product Proposal
 
 **Prepared for freight, brokerage, dispatch, compliance, onboarding, insurance, and factoring workflows**
@@ -120,7 +134,51 @@ Carrier Lookup Smart presents third-party public data. It does not create, verif
 
 The product is a research and screening aid, not a compliance system. It can generate 1000s of Leads in seconds.
 
-## 8. Tutorial
+## 8. Demo
+
+### Dashboard
+
+![Dashboard overview](Demo/Dashboard.png)
+
+The Dashboard provides the live extraction console, session counters, progress tracking, and quick actions for a bulk run.
+
+### Search
+
+![Carrier search screen](Demo/Search.png)
+
+The Search page lets users quickly look up a carrier by DOT, docket, email, phone, officer name, or company name.
+
+### Recent Sessions
+
+![Recent sessions list](Demo/Recent%20Sessions.png)
+
+Recent Sessions shows the status, timing, and completion details of prior extraction jobs for quick review.
+
+### HTML Reports
+
+![HTML reports page](Demo/HTML%20Reports.png)
+
+The HTML Reports page keeps a list of exported reports for easy access, review, and deletion.
+
+### Daily Register
+
+![Daily register view](Demo/Daily%20Register.png)
+
+The Daily Register helps review and process uploaded carrier PDFs from the daily FMCSA publication workflow.
+
+### Advance Register
+
+![Advance register workflow](Demo/Advance%20Register.png)
+
+The Advance Register extracts USDOT numbers from PDFs and organizes them for review, update, or cleanup.
+
+### Rules
+
+![Extraction rules page](Demo/Rules.png)
+
+The Rules page defines the qualification logic used to accept or reject carriers during extraction.
+
+## 9. Tutorial
 
 Watch the supplied walkthrough directly in the proposal:
 
@@ -135,7 +193,7 @@ You can also [open the tutorial video](https://res.cloudinary.com/dmh3yyu3p/vide
 
 The video is included as a repository reference asset. Authorized software packages also include a product README with installation, configuration, usage, output, and limitation details.
 
-## 9. Distribution Package
+## 10. Distribution Package
 
 Authorized users receive a separate password-protected ZIP. It contains:
 
@@ -152,7 +210,7 @@ Carrier_Lookup_Smart.zip/
 
 The executable and protected ZIP are deliberately not published in this documentation repository. The password should be provided only through the owner's authorized delivery channel.
 
-## 10. License And Ownership
+## 11. License And Ownership
 
 Carrier Lookup Smart is proprietary software owned and published by Muhammad Abdullah, trading as HAULIXX LOGISTICS. The software is licensed, not sold. Authorized use is governed by the `License.txt` file supplied with the package.
 
@@ -160,10 +218,9 @@ The product license generally permits authorized internal business use and one a
 
 See [LICENSE](LICENSE) for the repository terms and [License](License.txt) for the distributed software EULA.
 
-## 11. Next Step
+## 12. Next Step
 Read [Frequently Asked Questions](FAQS.md).
 
 For access, licensing questions, additional seats, or a commercial discussion, contact **Muhammad Abdullah** at [abdullahtemp4@gmail.com](mailto:abdullahtemp4@gmail.com) or Through Whatsapp.
 
-Website: <a href="https://spectacular-conkies-688a8b.netlify.app">Smart Carrier Lookup Website</a>.
-</video>
+Website: <a href="https://smart-carrier-lookup.netlify.app">Smart Carrier Lookup Website</a>.
