@@ -1,14 +1,14 @@
 # Carrier Lookup Smart
 
-<table width="100%" cellpadding="18" cellspacing="0">
+<table width="100%" cellpadding="18" cellspacing="0" border="0">
 <tr>
 <td width="32%" align="center">
 <img src="https://res.cloudinary.com/dmh3yyu3p/image/upload/v1790148138/logo_vulhph.png" alt="Smart Carrier Lookup logo" width="150" />
 </td>
 <td valign="middle">
 <h1>Muhammad Abdullah</h1>
-<p><a href="mailto:abdullahtemp4@gmail.com">abdullahtemp4@gmail.com</a></p>
-<p><a href="https://smart-carrier-lookup.netlify.app">Smart Carrier Lookup Website</a></p>
+<p><a href="mailto:abdullahtemp4@gmail.com">Email</a></p>
+<p><a href="https://smart-carrier-lookup.netlify.app">Website</a></p>
 </td>
 </tr>
 </table>
